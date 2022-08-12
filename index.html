@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janai Purnima</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            background-image: url(https://1.bp.blogspot.com/-0h7kW-ub61s/XqMBqbk6qSI/AAAAAAAAALA/VdOIO8KH8I0_Jo2M12KnvKuNY_FVJkEzwCLcBGAsYHQ/s16000/1.jpg);
+            backdrop-filter: blur(5px)  ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        
+        }
+        .blur{
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(5px);
+        }
+        .image1{
+            height: 30%;
+            max-height:300px;
+            width: 50%;
+            max-width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+            background: url(http://www.gfcookingclub.com/wp-content/uploads/2012/05/quati_beans.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            z-index: 1;
+        }
+
+        .image2{
+            height: 30%;
+            max-height:300px;
+            width: 50%;
+            max-width: 300px;
+            position:absolute;
+            top: 5%;
+            left: 5%;
+            background: url(https://i.pinimg.com/originals/43/57/cd/4357cd8836dffee5a8adcb7144720e92.jpg) no-repeat;
+            background-position: center;
+            background-size: cover; 
+            clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            
+        }
+        .image3{
+            height: 30%;
+            max-height:300px;
+            width: 50%;
+            max-width: 300px;
+            position:absolute;
+            bottom:5% ;
+            right: 5%;
+            background: url(https://s.wsj.net/public/resources/images/BN-UP541_0809NE_M_20170808231905.jpg) no-repeat;
+            background-position: center;
+            background-size: cover; 
+            clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            
+        }
+        @media only screen and (max-width: 700px) {
+            .image2, .image1, .image3{
+                height: 25%;
+            }
+            
+        }
+        video{
+            display: none;
+        }
+        .image1,.image2,.image3{
+            transition: 0.2s;
+        }
+        .image1:hover,.image2:hover,.image3:hover{
+                cursor: pointer;
+                scale: 1.2;
+            }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blur"></div>
+        
+            <div class="image1">
+            </div>
+            <div class="image2">
+            </div>
+            <div class="image3">
+            </div>
+            
+        
+        
+    </div>
+    <video id="vid1" controls autoplay loop src="./“OH MAICHA“ Brijesh Shrestha x Barsha Karmacharya (Official Video).mp4"  height="200px" ></video>
+    <script>
+        document.getElementById('vid1').currentTime = 18;
+    </script> 
+</body>
+
+</html>
