@@ -1,112 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Janai Purnima</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
         }
-        .container{
+
+        .container {
             height: 100vh;
             background-image: url(https://1.bp.blogspot.com/-0h7kW-ub61s/XqMBqbk6qSI/AAAAAAAAALA/VdOIO8KH8I0_Jo2M12KnvKuNY_FVJkEzwCLcBGAsYHQ/s16000/1.jpg);
-            backdrop-filter: blur(5px)  ;
+            backdrop-filter: blur(5px);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            
-        
+
+
         }
-        .blur{
+
+        .blur {
             height: 100vh;
             background-color: rgba(0, 0, 0, 0);
             backdrop-filter: blur(5px);
         }
-        .image1{
+
+        .image1 {
             height: 30%;
-            max-height:300px;
+            max-height: 300px;
             width: 50%;
             max-width: 300px;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50% ,-50%);
+            transform: translate(-50%, -50%);
             background: url(http://www.gfcookingclub.com/wp-content/uploads/2012/05/quati_beans.jpg) no-repeat;
             background-position: center;
             background-size: cover;
-            clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
             z-index: 1;
         }
 
-        .image2{
+        .image2 {
             height: 30%;
-            max-height:300px;
+            max-height: 300px;
             width: 50%;
             max-width: 300px;
-            position:absolute;
+            position: absolute;
             top: 5%;
             left: 5%;
             background: url(https://i.pinimg.com/originals/43/57/cd/4357cd8836dffee5a8adcb7144720e92.jpg) no-repeat;
             background-position: center;
-            background-size: cover; 
-            clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            
+            background-size: cover;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
         }
-        .image3{
+
+        .image3 {
             height: 30%;
-            max-height:300px;
+            max-height: 300px;
             width: 50%;
             max-width: 300px;
-            position:absolute;
-            bottom:5% ;
+            position: absolute;
+            bottom: 5%;
             right: 5%;
             background: url(https://s.wsj.net/public/resources/images/BN-UP541_0809NE_M_20170808231905.jpg) no-repeat;
             background-position: center;
-            background-size: cover; 
-            clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-            
+            background-size: cover;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+
         }
+
         @media only screen and (max-width: 700px) {
-            .image2, .image1, .image3{
+
+            .image2,
+            .image1,
+            .image3 {
                 height: 25%;
             }
-            
+
         }
-        video{
-            display: none;
+
+        .video {
+            display: flex;
+            align-items: center;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 2%;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        .image1,.image2,.image3{
+
+        .play {
+            position: absolute;
+            width: 100px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            background-color: rgba(25, 22, 22, 0.22);
+            padding: 4px;
+            border-radius: 10px;
+            bottom: 4%;
+            left: 5%;
+            backdrop-filter: blur(5px);
+        }
+
+        .image1,
+        .image2,
+        .image3 {
             transition: 0.2s;
         }
-        .image1:hover,.image2:hover,.image3:hover{
-                cursor: pointer;
-                scale: 1.2;
+
+        .image1:hover,
+        .image2:hover,
+        .image3:hover {
+            cursor: pointer;
+            scale: 1.2;
+        }
+        .close{
+            position: absolute;
+            top: 4%;
+            right: 3%;
+            height: 15%;
+            width: 10%;
+            z-index: 9;
+            cursor: pointer;
+        }
+        .line{
+            background-color: rgb(0, 0, 0);
+            height: 4px;
+            border-radius: 15px;
             }
-        
+        .line1{
+            transform: rotateZ(-45deg) translateY(8px) translateX(-10px);
+
+        }
+        .line2{
+            transform: rotateZ(45deg)translateY(8px) translateX(7px);
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="blur"></div>
-        
-            <div class="image1">
-            </div>
-            <div class="image2">
-            </div>
-            <div class="image3">
-            </div>
-            
-        
-        
+
+        <div class="image1">
+        </div>
+        <div class="image2">
+        </div>
+        <div class="image3">
+        </div>
+
+
+
     </div>
-    <video id="vid1" controls autoplay loop src="./“OH MAICHA“ Brijesh Shrestha x Barsha Karmacharya (Official Video).mp4"  height="200px" ></video>
+    <div class="video" id="videoDiv">
+        <video autoplay muted src="./“OH MAICHA“ Brijesh Shrestha x Barsha Karmacharya (Official Video).mp4"
+            height="200px" id="vid1"></video>
+        <p class="play" id="play_pause" onclick="music()">Play Sound</p>
+        <div class="close" id="closeBtn">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+        </div>
+    </div>
+
     <script>
         document.getElementById('vid1').currentTime = 18;
-    </script> 
+        let video = document.getElementById('vid1');
+        let play = document.getElementById('play_pause');
+        let videoDiv = document.getElementById('videoDiv');
+        let closeBtn = document.getElementById('closeBtn');
+
+        closeBtn.addEventListener("click", ()=>{
+            console.log("hello")
+            videoDiv.outerHTML="";
+        })
+        
+        function music(){
+            if(video.muted == true){
+                video.muted = false;
+                play.innerText="mute";
+
+            }
+            else{
+                video.muted= true;
+                play.innerText="play sound";
+            }
+            
+        }
+        //  console.log(videoDiv.outerHTML)
+        
+    </script>
 </body>
 
 </html>
